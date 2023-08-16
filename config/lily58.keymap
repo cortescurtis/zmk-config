@@ -12,7 +12,7 @@
 
 #define ISRT 	  0
 #define SYMNUM    1
-#define FUNCTIONS 2
+#define FUNCNAV	  2
 #define QWERTY    3
 
 &mt {
@@ -39,14 +39,14 @@
 // |  ESC  |  1  |  2  |  3   |  4    |   5  |                  |  6   |  7    |  8    |  9   |   0   |   -   |
 // |SFT_TAB|  Y  |  C  |  L   |  M    |   K  |                  |  Z   |  F    |  U    |  ,   |   '   |   \   |
 // |  TAB  |CTL-I|OPT-S|SFT-R | CMD-T |   G  |                  |  P   | CMD-N | SFT-E |OPT-A | CTL-O |   ;   |
-// |   `   |  Q  |  V  |  W   |  D    |   J  |  TO0  |  | TO3   |  B   |  H    |  /    |  .   |   X   |   |   |
+// |   `   |  Q  |  V  |  W   |  D    |   J  |  TO0  |  | TO4   |  B   |  H    |  /    |  .   |   X   |   |   |
 //                     | BSPC |  GUI  | SPC  | SL 2  |  | SL 1  | ENT  |WRD_SFT|  DEL  |
 			bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3      &kp N4     		&kp N5                                      		&kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-&kp LSFT(TAB) &kp Y &kp C   &kp L       &kp M          	&kp K                                       		&kp Z      	&kp F       &kp U       &kp COMMA   &kp APOS    &kp BSLH
-&kp TAB     &kp I   &kp S   &kp R       &kp T      		&kp G                                       		&kp P       &kp N       &kp E       &kp I       &kp O       &kp SEMI
-&kp GRAVE   &kp Q   &kp V   &kp W       &kp D      		&kp J      		&to ISRT             &to QWERTY		&kp B      	&kp H       &kp FLSH    &kp DOT     &kp X       &kp PIPE
-							&kp BSPC	&sk LGUI	&kp SPACE	      	&sl FUNCTIONS        &sl SYMNUM     &kp RET     &caps_word  &kp DEL
+&kp ESC     &kp N1  &kp N2  &kp N3      &kp N4     		&kp N5 	                          	 &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
+&kp LSFT(TAB) &kp Y &kp C   &kp L       &kp M          	&kp K                               	 &kp Z      	&kp F       &kp U       &kp COMMA   &kp APOS    &kp BSLH
+&kp TAB     &kp I   &kp S   &kp R       &kp T      		&kp G                            	    &kp P       &kp N       &kp E       &kp I       &kp O       &kp SEMI
+&kp GRAVE   &kp Q   &kp V   &kp W       &kp D      		&kp J 	&to ISRT        &to QWERTY		&kp B      	&kp H       &kp FLSH    &kp DOT     &kp X       &kp PIPE
+							&kp BSPC	&sk LGUI	&kp SPACE	&sl FUNCNAV		&sl SYMNUM      &kp RET     &caps_word  &kp DEL
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -70,13 +70,13 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
-		control_layer {
+		function_navigation_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4    |   5   |                  |  6     |   7   |   8    |   9   |    0   | BT_CLR  |
-// |  DEL  |  F9 | F10 |  F11 |  F12  |BT_NXT |                  | PGUP   |  PGDN |  HOME  |  END  | VOL_UP | RGB_TOG |
-// |  TAB  |  F5 | F6  |  F7  |  F8   |BT_SEL0|                  | LEFT   |  DOWN |   UP   | RIGHT | VOL_MU |         |
-// |       |  F1 | F2  |  F3  |  F4   |BT_PRV |  TO0  |  |   TO3 | C_PREV |  PlPa | C_NEXT |       | VOL_DN | BSPC    |
-//                     | GUI  | SL 2  | SHIFT | SPACE |  | ENTER | CTRL   | SL 1  |  ALT   |
+// | TRANS  |   F1  |  F2  |  F3   |  F4  |  F5  |                  |  F6  |  F7  |  F8  | F9  | F10 | F11 |
+// | TRANS  | BT 0  | BT 1 | BT 2  | BT 3 | BT 4 |                  | HOME | PGDN | PGUP | END | INS | F12 |
+// | TRANS  | RSG_5 | RSG_4 | RSG_SPC |    |    |                  | LEFT   |  DOWN |   UP   | RIGHT | VOL_MUTE | META |
+// | BT CLR | CMD_Z | CMD_X | CMD_C | CMD_V | CMD_B |  TO0  |  |   TO3 | C_PREV |  PlPa | C_NEXT | VOL_UP | VOL_DN | HYPR |
+//                     | TRANS | TRANS | TRANS | SL 2 |  | TRANS | TRANS | TRANS  | TRANS |
 			bindings = <
 &trans   &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                  			&kp N6      &kp N7    	&kp N8      &kp N9     &kp N0        &bt BT_CLR
 &trans   &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_NXT                   		&kp PG_UP   &kp PG_DN 	&kp HOME    &kp END    &kp C_VOL_UP  &rgb_ug RGB_TOG
