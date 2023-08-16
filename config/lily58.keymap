@@ -15,6 +15,10 @@
 #define FUNCTIONS 2
 #define QWERTY    3
 
+&mt {
+    tapping-term-ms = <200>;
+}
+
 / {
     behaviors {
       skq: sticky_key_quick_release {
@@ -33,16 +37,16 @@
 		default_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4    |   5  |                  |  6   |  7    |  8    |  9   |   0   |   -   |
-// |  DEL  |  Q  |  W  |  F   |  P    |   B  |                  |  J   |  L    |  U    |  Y   |   "   |   \   |
-// |  TAB  |  A  |  R  |  S   |  T    |   G  |                  |  M   |  N    |  E    |  I   |   O   |   ;   |
-// |   `   |  Z  |  X  |  C   |  D    |   V  |  TO0  |  | TO3   |  K   |  H    |  ,    |  .   |   /   |  BSPC |
-//                     | GUI  | SL 2  |SHIFT | SPACE |  | ENTER | CTRL | SL 1  |  ALT  |
+// |SFT_TAB|  Y  |  C  |  L   |  M    |   K  |                  |  Z   |  F    |  U    |  ,   |   '   |   \   |
+// |  TAB  |CTL-I|OPT-S|SFT-R | CMD-T |   G  |                  |  P   | CMD-N | SFT-E |OPT-A | CTL-O |   ;   |
+// |   `   |  Q  |  V  |  W   |  D    |   J  |  TO0  |  | TO3   |  B   |  H    |  /    |  .   |   X   |   |   |
+//                     | BSPC |  GUI  | SPC  | SL 2  |  | SL 1  | ENT  |WRD_SFT|  DEL  |
 			bindings = <
 &kp ESC     &kp N1  &kp N2  &kp N3      &kp N4     		&kp N5                                      		&kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-&kp DEL     &kp Q   &kp W   &kp F       &kp P      		&kp B                                       		&kp J      	&kp L       &kp U       &kp Y       &kp APOS    &kp BSLH
-&kp TAB     &kp A   &kp R   &kp S       &kp T      		&kp G                                       		&kp M       &kp N       &kp E       &kp I       &kp O       &kp SEMI
-&kp GRAVE   &kp Z   &kp X   &kp C       &kp D      		&kp V      		&to COLEMAKDH        &to QWERTY		&kp K      	&kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp BSPC
-							&sk LGUI	&sl FUNCTIONS	&sk LSHFT		&kp SPACE            &kp RET   		&sk LCTRL &sl SYMNUM	&sk LALT
+&kp LSFT(TAB) &kp Y &kp C   &kp L       &kp M          	&kp K                                       		&kp Z      	&kp F       &kp U       &kp COMMA   &kp APOS    &kp BSLH
+&kp TAB     &kp I   &kp S   &kp R       &kp T      		&kp G                                       		&kp P       &kp N       &kp E       &kp I       &kp O       &kp SEMI
+&kp GRAVE   &kp Q   &kp V   &kp W       &kp D      		&kp J      		&to COLEMAKDH        &to QWERTY		&kp B      	&kp H       &kp FLSH    &kp DOT     &kp X       &kp PIPE
+							&kp BSPC	&sk LGUI	&kp SPACE	      	&sl FUNCTIONS        &sl SYMNUM     &kp RET     &caps_word  &kp DEL
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
