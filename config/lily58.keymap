@@ -42,11 +42,11 @@
 // |   `   |  Q  |  V  |  W   |  D    |   J  |  TO0  |  | TO3   |  B   |  H    |  /    |  .   |   X   |   |   |
 //                     | BSPC |  GUI  | SPC  | SL 2  |  | SL 1  | ENT  |WRD_SFT|  DEL  |
 			bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3      &kp N4     		&kp N5 	                          	 	&kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-&kp LSFT(TAB) &kp Y &kp C   &kp L       &kp M          	&kp K                               	&kp Z       &kp F       &kp U       &kp COMMA   &kp APOS    &kp BSLH
-&kp TAB     &kp I   &kp S   &kp R       &kp T      		&kp G                            	    &kp P       &kp N       &kp E       &kp I       &kp O       &kp SEMI
-&kp GRAVE   &kp Q   &kp V   &kp W       &kp D      		&kp J 	&to ISRT        &to QWERTY		&kp B      	&kp H       &kp FLSH    &kp DOT     &kp X       &kp PIPE
-							&kp BSPC	&sk LGUI	&kp SPACE	&sl FUNCNAV		&sl SYMNUM      &kp RET     &caps_word  &kp DEL
+&kp ESC      	&kp N1  	&kp N2  	&kp N3		&kp N4     	&kp N5 	                          	 	 	&kp N6      &kp N7      &kp N8     &kp N9      	&kp N0      &kp MINUS
+&kp LSFT(TAB)	&kp Y 		&kp C       &kp L       &kp M       &kp K                               		&kp Z       &kp F       &kp U      &kp COMMA   	&kp APOS    &kp BSLH
+&kp TAB     	&mt LCTRL I	&mt LALT S	&mt LGUI R	&mt LSHFT T	&kp G                            	    	&kp P       &mt RSHFT N &mt RGUI E &mt RALT A	&mt RCTRL O	&kp SEMI
+&kp GRAVE   	&kp Q   	&kp V   	&kp W       &kp D      	&kp J 		&to ISRT        &to QWERTY		&kp B      	&kp H       &kp FLSH   &kp DOT     	&kp X       &kp PIPE
+										&kp BSPC	&sk LGUI	&kp SPACE	&sl FUNCNAV		&sl SYMNUM      &kp RET     &caps_word  &kp DEL
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -78,11 +78,11 @@
 // | BT CLR | CMD_Z | CMD_X | CMD_C   | CMD_V  | CMD_B  |  TO0  |  |   TO3 | C_PREV |  PlPa  | C_NEXT | VOL_UP | VOL_DN   | HYPR |
 //                          | TRANS   | TRANS  | TRANS  |  SL 2 |  | TRANS | TRANS   | TRANS | TRANS  |
 			bindings = <
-&trans   &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                  			&kp N6      &kp N7    	&kp N8      &kp N9     &kp N0        &bt BT_CLR
-&trans   &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_NXT                   		&kp PG_UP   &kp PG_DN 	&kp HOME    &kp END    &kp C_VOL_UP  &rgb_ug RGB_TOG
-&kp TAB  &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 0                   	 	&kp LEFT  	&kp DOWN	&kp UP     	&kp RIGHT  &kp C_MUTE    &none
-&none    &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_PRV   		&trans  &trans  &kp C_PREV  &kp C_PP  	&kp C_NEXT  &none      &kp C_VOL_DN  &trans
-                          &trans   &trans   &trans  			&trans  &trans  &trans      &trans    &trans
+&trans   &kp N1  	  		&kp N2   		&kp N3   		&kp N4 			&kp N5                  			&kp N6      &kp N7    	&kp N8      &kp N9     &kp N0        &bt BT_CLR
+&trans   &bt BT_SEL 0 		&bt BT_SEL 1	&bt BT_SEL 2  	&bt BT_SEL 3  	&bt BT_SEL 4                   		&kp PG_UP   &kp PG_DN 	&kp HOME    &kp END    &kp C_VOL_UP  &rgb_ug RGB_TOG
+&trans   &kp RS(RGUI(5))  	&kp F6 			&kp F7 			&kp F8   		&bt BT_SEL 0                   	 	&kp LEFT  	&kp DOWN	&kp UP     	&kp RIGHT  &kp C_MUTE    &none
+&none    &kp F1  		&kp F2   		&kp F3			&kp F4   		&bt BT_PRV   		&trans  &trans  &kp C_PREV  &kp C_PP  	&kp C_NEXT  &none      &kp C_VOL_DN  &trans
+										&trans 			&trans   		&trans 				&trans  &trans  &trans      &trans    &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -95,7 +95,7 @@
 // |  TAB  |  A  |  S  |  D   |   F   |  G   |                  |  H   |  J    |  K    |  L   |   ;   |   '   |
 // |   `   |  Z  |  X  |  C   |   V   |  B   |  TO0  |  | TO3   |  N   |  M    |  ,    |  .   |   /   | BSPC  |
 //                     | GUI  | SL 2  |SHIFT | SPACE |  | ENTER | CTRL | SL 1  |  ALT  |
-			bindings = <
+			bindings = <r b
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                   &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp LCTRL &kp Q  &kp W  &kp E    &kp R    &kp T                    &kp Y  &kp U    &kp I     &kp O   &kp P    &kp BSLH
 &kp TAB   &kp A  &kp S  &kp D    &kp F    &kp G                    &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
