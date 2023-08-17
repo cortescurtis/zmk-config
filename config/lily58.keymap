@@ -41,7 +41,7 @@
 &kp ESC      	&kp N1  	&kp N2  	&kp N3		&kp N4     	&kp N5 	                          	 	 	&kp N6      &kp N7      &kp N8     &kp N9      	&kp N0      &kp MINUS
 &kp LSFT(TAB)	&kp Y 		&kp C       &kp L       &kp M       &kp K                               		&kp Z       &kp F       &kp U      &kp COMMA   	&kp APOS    &kp BSLH
 &kp TAB     	&mt LCTRL I	&mt LALT S	&mt LGUI R	&mt LSHFT T	&kp G                            	    	&kp P       &mt RSHFT N &mt RGUI E &mt RALT A	&mt RCTRL O	&kp SEMI
-&kp GRAVE   	&kp Q   	&kp V   	&kp W       &kp D      	&kp J 		&to ISRT        &to QWERTY		&kp B      	&kp H       &kp FLSH   &kp DOT     	&kp X       &kp PIPE
+&kp GRAVE   	&kp Q   	&kp V   	&kp W       &kp D      	&kp J 		&tog ISRT       &tog QWERTY		&kp B      	&kp H       &kp FLSH   &kp DOT     	&kp X       &kp PIPE
 										&kp BSPC	&sk LGUI	&kp SPACE	&sl FUNCNAV		&sl SYMNUM      &kp RET     &caps_word  &kp DEL
 			>;
 
