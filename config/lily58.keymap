@@ -15,10 +15,6 @@
 #define FUNCNAV	  2
 #define QWERTY    3
 
-&mt {
-    tapping-term-ms = <200>;
-}
-
 / {
     behaviors {
       skq: sticky_key_quick_release {
