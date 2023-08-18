@@ -25,6 +25,16 @@
         release-after-ms = <1000>;
         quick-release;
       };
+      gqt: global-quick-tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "GLOBAL_QUICK_TAP";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <125>;
+          global-quick-tap;
+          bindings = <&kp>, <&kp>;
+        };
     };
 
 	keymap {
@@ -38,12 +48,12 @@
 // |   `   |  Q  |  V  |  W   |  D    |   J  |  TO0  |  | TO3   |  B   |  H    |  /    |  .   |   X   |   :   |
 //                     | BSPC |  GUI  | SPC  | SL 2  |  | SL 1  | ENT  |WRD_SFT|  DEL  |
 			bindings = <
-&kp ESC        &kp N1       &kp N2      &kp N3      &kp N4        &kp N5                               &kp N6   &kp N7        &kp N8      &kp N9      &kp N0       &kp MINUS
-&kp LS(TAB)    &kp Y        &kp C       &kp L       &kp M         &kp K                                &kp Z    &kp F         &kp U       &kp COMMA   &kp APOS     &kp BSLH
-&kp TAB        &mt LCTRL I  &mt LALT S  &mt LGUI R  &mt LSHIFT T  &kp G                                &kp P    &mt RSHIFT N  &mt RGUI E  &mt RALT A  &mt RCTRL O  &kp SEMI
-&kp GRAVE      &kp Q        &kp V       &kp W       &kp D         &kp J      &tog ISRT    &tog QWERTY  &kp B    &kp H         &kp FSLH    &kp DOT     &kp X        &kp COLON
-                                        &kp BSPC    &sk LGUI      &kp SPACE  &sl FUNCNAV  &sl SYMNUM   &kp RET  &caps_word    &kp DEL
-			>;
+&kp ESC        &kp N1         &kp N2       &kp N3       &kp N4         &kp N5                               &kp N6   &kp N7         &kp N8       &kp N9       &kp N0        &kp MINUS
+&kp LS(TAB)    &kp Y          &kp C        &kp L        &kp M          &kp K                                &kp Z    &kp F          &kp U        &kp COMMA    &kp APOS      &kp BSLH
+&kp TAB        &gqt LCTRL I   &gqt LALT S  &gqt LGUI R  &gqt LSHIFT T  &kp G                                &kp P    &gqt RSHIFT N  &gqt RGUI E  &gqt RALT A  &gqt RCTRL O  &kp SEMI
+&kp GRAVE      &kp Q          &kp V        &kp W        &kp D          &kp J      &tog ISRT    &tog QWERTY  &kp B    &kp H          &kp FSLH     &kp DOT      &kp X         &kp COLON
+                                           &kp BSPC     &sk LGUI       &kp SPACE  &sl FUNCNAV  &sl SYMNUM   &kp RET  &caps_word     &kp DEL
+			>; 
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
@@ -93,11 +103,11 @@
 // |   `   |  Z  |  X  |  C   |   V   |  B   |  TO0  |  | TO3   |  N   |  M    |  ,    |  .   |   /   |  "|"  |
 //                     | BSPC |  GUI  | SPC  | SL 2  |  | SL 1  | RET  |WRD_SFT|  DEL  |
 			bindings = <
-&kp ESC      &kp N1       &kp N2      &kp N3      &kp N4       &kp N5                           &kp N6  &kp N7       &kp N8      &kp N9      &kp N0          &kp MINUS
-&kp LS(TAB)  &kp Q        &kp W       &kp E       &kp R        &kp T                            &kp Y   &kp U        &kp I       &kp O       &kp P           &kp BSLH
-&kp TAB      &mt LCTRL A  &mt LALT S  &mt LGUI D  &mt LSHFT F  &kp G                            &kp H   &mt RSHFT J  &mt RGUI K  &mt RALT L  &mt RCTRL SEMI  &kp SQT
-&kp GRAVE    &kp Z        &kp X       &kp C       &kp V        &kp B   &trans       &trans  		&kp N   &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp PIPE
-									  &trans      &trans       &trans  &sl FUNCNAV  &sl SYMNUM  &trans  &trans       &trans
+&kp ESC      &kp N1        &kp N2       &kp N3       &kp N4        &kp N5                           &kp N6  &kp N7        &kp N8       &kp N9       &kp N0           &kp MINUS
+&kp LS(TAB)  &kp Q         &kp W        &kp E        &kp R         &kp T                            &kp Y   &kp U         &kp I        &kp O        &kp P            &kp BSLH
+&kp TAB      &gqt LCTRL A  &gqt LALT S  &gqt LGUI D  &gqt LSHFT F  &kp G                            &kp H   &gqt RSHFT J  &gqt RGUI K  &gqt RALT L  &gqt RCTRL SEMI  &kp SQT
+&kp GRAVE    &kp Z         &kp X        &kp C        &kp V         &kp B   &trans       &trans      &kp N   &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp PIPE
+									    &trans       &trans        &trans  &sl FUNCNAV  &sl SYMNUM  &trans  &trans        &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
