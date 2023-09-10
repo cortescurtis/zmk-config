@@ -49,10 +49,10 @@
             //                     |WRD_SH|  GUI  | SPC  | SL 2  |  | SL 1  | ENT  | BSPC  |  DEL  |
 
             bindings = <
-&kp ESC           &gqt EXCL N1  &gqt AT N2    &gqt HASH N3    &gqt DOLLAR N4  &gqt PERCENT N5                             &gqt CARET N6  &gqt AMPS N7  &gqt ASTRK N8    &gqt LEFT_PARENTHESIS N9  &gqt RIGHT_PARENTHESIS N0  &gqt DEL BACKSPACE
-&gqt TILDE GRAVE  &gqt LS(Y) Y  &gqt LS(C) C  &gqt LS(L) L    &gqt LS(M) M    &gqt LS(K) K                                &gqt LS(Z) Z   &gqt LS(F) F  &gqt LS(U) U     &gqt LESS_THAN COMMA      &gqt DOUBLE_QUOTES APOS    &gqt PIPE BSLH
-&gqt LS(TAB) TAB  &gqt LS(I) I  &gqt LS(S) S  &gqt LS(R) R    &gqt LS(T) T    &gqt LS(G) G                                &gqt LS(P) P   &gqt LS(N) N  &gqt LS(E) E     &gqt LS(A) A              &gqt LS(O) O               &gqt COLON SEMICOLON
-&sk LCTRL         &gqt LS(Q) Q  &gqt LS(V) V  &gqt LS(W) W    &gqt LS(D) D    &gqt LS(J) J     &sk LGUI       &sk RSHFT   &gqt LS(B) B   &gqt LS(H) H  &gqt QMARK FSLH  &gqt GREATER_THAN PERIOD  &gqt LS(X) X               &sk RALT
+&kp ESC           &gqt EXCL N1  &gqt AT N2    &gqt HASH N3    &gqt DOLLAR N4  &gqt PERCENT N5                             &gqt CARET N6  &gqt AMPS N7  &gqt ASTRK N8    &gqt MINUS N9             &gqt UNDER N0            &gqt DEL BACKSPACE
+&gqt TILDE GRAVE  &gqt LS(Y) Y  &gqt LS(C) C  &gqt LS(L) L    &gqt LS(M) M    &gqt LS(K) K                                &gqt LS(Z) Z   &gqt LS(F) F  &gqt LS(U) U     &gqt LESS_THAN COMMA      &gqt DOUBLE_QUOTES APOS  &gqt PIPE BSLH
+&gqt LS(TAB) TAB  &gqt LS(I) I  &gqt LS(S) S  &gqt LS(R) R    &gqt LS(T) T    &gqt LS(G) G                                &gqt LS(P) P   &gqt LS(N) N  &gqt LS(E) E     &gqt LS(A) A              &gqt LS(O) O             &gqt COLON SEMICOLON
+&sk LCTRL         &gqt LS(Q) Q  &gqt LS(V) V  &gqt LS(W) W    &gqt LS(D) D    &gqt LS(J) J     &sk LGUI       &sk RSHFT   &gqt LS(B) B   &gqt LS(H) H  &gqt QMARK FSLH  &gqt GREATER_THAN PERIOD  &gqt LS(X) X             &sk RALT
                                               &kp DOWN_ARROW  &sk UP_ARROW    &kp SPACE        &sl FUNCNAV    &sl SYMNUM  &kp RET        &kp LEFT      &kp RIGHT
             >;
 
