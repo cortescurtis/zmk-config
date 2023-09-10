@@ -49,7 +49,7 @@
             //                     |WRD_SH|  GUI  | SPC  | SL 2  |  | SL 1  | ENT  | BSPC  |  DEL  |
 
             bindings = <
-&kp ESC           &gqt EXCL N1  &gqt AT N2    &gqt HASH N3    &gqt DOLLAR N4  &gqt PERCENT N5                             &gqt CARET N6  &gqt AMPS N7  &gqt ASTRK N8    &gqt LEFT_PARENTHESIS N9  &gqt RIGHT_PARENTHESIS N0  &kp BACKSPACE
+&kp ESC           &gqt EXCL N1  &gqt AT N2    &gqt HASH N3    &gqt DOLLAR N4  &gqt PERCENT N5                             &gqt CARET N6  &gqt AMPS N7  &gqt ASTRK N8    &gqt LEFT_PARENTHESIS N9  &gqt RIGHT_PARENTHESIS N0  &gqt DEL BACKSPACE
 &gqt TILDE GRAVE  &gqt LS(Y) Y  &gqt LS(C) C  &gqt LS(L) L    &gqt LS(M) M    &gqt LS(K) K                                &gqt LS(Z) Z   &gqt LS(F) F  &gqt LS(U) U     &gqt LESS_THAN COMMA      &gqt DOUBLE_QUOTES APOS    &gqt PIPE BSLH
 &gqt LS(TAB) TAB  &gqt LS(I) I  &gqt LS(S) S  &gqt LS(R) R    &gqt LS(T) T    &gqt LS(G) G                                &gqt LS(P) P   &gqt LS(N) N  &gqt LS(E) E     &gqt LS(A) A              &gqt LS(O) O               &gqt COLON SEMICOLON
 &sk LCTRL         &gqt LS(Q) Q  &gqt LS(V) V  &gqt LS(W) W    &gqt LS(D) D    &gqt LS(J) J     &sk LGUI       &sk RSHFT   &gqt LS(B) B   &gqt LS(H) H  &gqt QMARK FSLH  &gqt GREATER_THAN PERIOD  &gqt LS(X) X               &sk RALT
@@ -87,11 +87,11 @@
             //                          | TRANS   | TRANS  | TRANS  |  SL 2 |  | TRANS | TRANS   | TRANS | TRANS  |
 
             bindings = <
-&trans      &kp F1          &kp F2          &kp F3             &kp F4        &kp F5                          &kp F6      &kp F7     &kp F8       &kp F9        &kp F10       &kp F11
-&trans      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &kp HOME    &kp PG_DN  &kp PAGE_UP  &kp END       &kp C_VOL_UP  &kp F12
-&trans      &kp LS(LG(N5))  &kp LS(LG(N4))  &kp LS(LG(SPACE))  &kp C_BRI_UP  &kp C_BRI_DN                    &kp LEFT    &kp DOWN   &kp UP       &kp RIGHT     &kp C_MUTE    &sk LMETA
-&bt BT_CLR  &kp LG(Z)       &kp LG(X)       &kp LG(C)          &kp LG(V)     &kp LG(B)     &trans    &trans  &kp C_PREV  &kp C_PP   &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &sk RMETA
-                                            &trans             &trans        &trans        &trans    &to 0   &trans      &trans     &trans
+&trans      &kp F1          &kp F2          &kp F3             &kp F4        &kp F5                                 &kp F6      &kp F7     &kp F8       &kp F9        &kp F10       &kp F11
+&trans      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                           &kp HOME    &kp PG_DN  &kp PAGE_UP  &kp END       &kp C_VOL_UP  &kp F12
+&trans      &kp LS(LG(N5))  &kp LS(LG(N4))  &kp LS(LG(SPACE))  &kp C_BRI_UP  &kp C_BRI_DN                           &kp LEFT    &kp DOWN   &kp UP       &kp RIGHT     &kp C_MUTE    &sk LMETA
+&bt BT_CLR  &kp LG(Z)       &kp LG(X)       &kp LG(C)          &kp LG(V)     &kp LG(B)     &kp LG(SPACE)    &trans  &kp C_PREV  &kp C_PP   &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &sk RMETA
+                                            &trans             &trans        &trans        &trans           &to 0   &trans      &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
